@@ -14,6 +14,10 @@ import com.luv2code.springdemo.entity.Customer;
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
 	
+//	public CustomerDAOImpl() {
+//		
+//	}
+
 	// need to inject the session factory
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -24,6 +28,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		// get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
+		System.out.println("inside dao");
 		
 		// create a query
 		Query<Customer> theQuery = 

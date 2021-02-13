@@ -16,6 +16,10 @@ public class CustomerController {
 	
 	// need to inject the customer dao
 	
+//	public CustomerController() {
+//		
+//	}
+
 	@Autowired
 	private CustomerDAO customerDAO;
 	
