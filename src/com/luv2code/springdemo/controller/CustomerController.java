@@ -50,6 +50,7 @@ public class CustomerController {
 	{
 		// save the customer using our service
 		customerService.saveCustomer(theCustomer);
+		
 		return "redirect:/customer/list";
 	}
 	
@@ -67,6 +68,15 @@ public class CustomerController {
 		//send over to our from
 		return "customer-form";
 		
+	}
+	
+	@GetMapping("/delete")
+	public String deleteCustomer(@RequestParam("customerID") int theId)
+	{
+		//delete the customer
+		customerService.deleteCustomer(theId);
+		
+		return "redirect:/customer/list";
 	}
 
 }
